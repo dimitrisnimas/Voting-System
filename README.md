@@ -40,7 +40,7 @@
 
 ## 📦 Installation
 
-1. Download the latest release from the [[Releases](https://github.com/dimitrisnimas/voting-system/releases) section.
+1. Download the latest release from the [Releases](https://github.com/dimitrisnimas/voting-system/releases) section.
 2. In your WordPress admin panel:
    - Go to **Plugins > Add New > Upload Plugin**
    - Upload the `.zip` file and click **Install Now**
