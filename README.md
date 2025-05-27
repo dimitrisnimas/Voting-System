@@ -1,42 +1,80 @@
-# Voting-System Plugin for WordPress
+# 🗳️ WordPress Anonymous Voting Plugin
 
-Technical Description of the Electronic Voting System
+**Secure. Anonymous. Real-Time. Token-Based Voting for WordPress.**
 
-The voting system is implemented as a custom WordPress plugin, designed to ensure security, anonymity, and data integrity. It is a lightweight, server-side application that utilizes the existing WordPress MySQL database infrastructure to handle all voting-related operations.
-Architecture:
+---
 
-    Token-Based Authentication:
-    Each participant receives a unique, randomly generated, one-time-use token via email. This token acts as an anonymous access key. No user registration or login is required, and no personal data is stored.
+## 🚀 Features (v2.0)
 
-    Database Structure:
+- 🔑 **Token-Based Access**  
+  Only users with a valid token can vote.
 
-        wp_voting_tokens: Stores issued tokens with fields for token (UNIQUE) and used (BOOLEAN).
+- 🕐 **Time-Restricted Voting**  
+  Voting is only allowed between defined start and end times.
 
-        wp_voting_votes: Stores the actual votes with fields for vote_option and timestamp. There is no link between the vote and the token or voter identity.
+- 🗳️ **Anonymous Voting**  
+  No personally identifiable information is stored. Full anonymity guaranteed.
 
-    Anonymity Guarantee:
-    When a vote is submitted, the corresponding token is marked as “used,” but the vote itself is stored separately with no identifying information. This ensures complete separation of identity verification and vote storage.
+- 📋 **Multiple Questions per Ballot**  
+  Create custom ballots with multiple questions and independent selection limits.
 
-    Time-Based Access Control:
-    The voting form is only accessible during the predefined voting window (May 10, from 10:00 to 22:00). Outside this timeframe, the form is disabled and a message is displayed to inform users.
+- ✅ **Valid/Invalid Answer Detection**  
+  Automatically flags ballots with invalid selections (e.g., too many options chosen).
 
-    Live Results Mechanism:
-    The results page uses AJAX polling (via admin-ajax.php) to dynamically display vote counts. This page is only enabled after the voting window closes, to prevent influencing voters during the process.
+- 📊 **Real-Time Results**  
+  Live vote counts and charts while the voting is ongoing.
 
-    Security Measures:
+- 🧠 **Full Admin Dashboard**  
+  Configure everything from the WordPress backend:
+  - Voting window
+  - Questions and options
+  - Maximum selections per question
+  - Token generation
+  - Real-time stats and participation charts
+  - Vote logs and detailed result reports
 
-        All user inputs (e.g., tokens and form data) are sanitized using WordPress functions like sanitize_text_field() and prepare() to prevent SQL injection and cross-site scripting (XSS).
+- 📄 **Post-Election Summary Report**  
+  View or export a full breakdown of results, including invalid votes.
 
-        Tokens are non-predictable, unique, and invalidated immediately after use.
+---
 
-        No names, email addresses, or IP addresses are stored or logged.
+## 📦 Installation
 
-Advantages:
+1. Download the latest release from the [Releases](https://github.com/your-username/your-repo/releases) section.
+2. In your WordPress admin panel:
+   - Go to **Plugins > Add New > Upload Plugin**
+   - Upload the `.zip` file and click **Install Now**
+   - Activate the plugin
+3. Go to **Voting System** in the admin menu to configure settings and manage voting.
 
-    High level of anonymity, with no user accounts, cookies, or session tracking required.
+---
 
-    Complies with data protection principles (GDPR-friendly).
+## 📌 Use Cases
 
-    No reliance on third-party platforms or external services.
+- Student or club elections  
+- Anonymous surveys  
+- Time-limited polls  
+- Board or committee voting
 
-    Transparent and verifiable process with automatic result display after voting ends.
+---
+
+## 🧭 Roadmap
+
+- [ ] Email-based token delivery
+- [ ] Vote confirmation receipts (without breaking anonymity)
+- [ ] Export results to CSV
+- [ ] Public results page (optional)
+
+---
+
+## 📄 License
+
+This plugin is open-source and licensed under the [MIT License].
+
+---
+
+## 🙌 Author
+
+Created by [Dimitris Nimas](https://dimitrisnimas.com)  
+For support or contributions, open an issue or submit a pull request!
+
