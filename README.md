@@ -40,7 +40,7 @@
 
 ## 📦 Installation
 
-1. Download the latest release from the [Releases](https://github.com/your-username/your-repo/releases) section.
+1. Download the latest release from the [[Releases](https://github.com/your-username/your-repo/releases](https://github.com/dimitrisnimas/voting-system/releases) section.
 2. In your WordPress admin panel:
    - Go to **Plugins > Add New > Upload Plugin**
    - Upload the `.zip` file and click **Install Now**
@@ -75,6 +75,6 @@ This plugin is open-source and licensed under the [MIT License].
 
 ## 🙌 Author
 
-Created by [Dimitris Nimas](https://dimitrisnimas.com)  
+Created by [Dimitris Nimas](https://dimitrisnimas.gr)  
 For support or contributions, open an issue or submit a pull request!
 
